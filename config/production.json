@@ -1,0 +1,156 @@
+{
+	"authentication": {
+		"public": {
+			"secret": "xxxxxxxx",
+			"expiry": 604800
+		},
+		"manager": {
+			"secret": "xxxxxxxx",
+			"accessExpiry": 604800,
+			"refreshExpiry": 604800,
+			"expiry": 604800
+		},
+		"user": {
+			"secret": "xxxxxxxx",
+			"accessExpiry": 604800,
+			"refreshExpiry": 604800,
+			"expiry": 604800
+		},
+		"agent": {
+			"secret": "xxxxxxxx",
+			"accessExpiry": 604800,
+			"refreshExpiry": 604800,
+			"expiry": 604800
+		}
+	},
+	"databases": {
+		"redis": {
+			"cache": {
+				"host": "18.192.24.6",
+				"port": 6379,
+				"password": "cvODNDvlfFKz2hSfhhYMKs//4fxkwAAc7jB/atb/uBbo1Z1nDOUKIxthMc3y5RaDKVa45NxUJKKfkTic",
+				"no_ready_check": true,
+				"db": 3
+			},
+			"rateLimit": {
+				"host": "18.192.24.6",
+				"port": 6379,
+				"password": "cvODNDvlfFKz2hSfhhYMKs//4fxkwAAc7jB/atb/uBbo1Z1nDOUKIxthMc3y5RaDKVa45NxUJKKfkTic",
+				"no_ready_check": true,
+				"db": 3
+			}
+		},
+		"postgres": {
+			"sync": {
+				"force": false,
+				"alter": false
+			},
+			"database": "mindmint",
+			"username": "postgres",
+			"password": "1Syu2Vu4y7SYd8Rzrz4T7cg4eOG8eT2",
+			"options": {
+				"host": "18.192.24.6",
+				"port": 5432,
+				"dialect": "postgres",
+				"logging": false,
+				"operationAliases": false,
+				"define": {
+					"charset": "utf8",
+					"collate": "utf8_general_ci"
+				},
+				"pool": {
+					"max": 25,
+					"min": 0,
+					"idle": 10000
+				}
+			}
+		},
+		"postgresEx": {
+			"sync": {
+				"force": false,
+				"alter": false
+			},
+			"database": "mindmint",
+			"username": "mindmint",
+			"password": "qYrJggrwAlKz",
+			"options": {
+				"host": "mindmint.cpw5dt1fzczv.eu-central-1.rds.amazonaws.com",
+				"port": 5432,
+				"dialect": "postgres",
+				"logging": false,
+				"operationAliases": false,
+				"define": {
+					"charset": "utf8",
+					"collate": "utf8_general_ci"
+				},
+				"pool": {
+					"max": 25,
+					"min": 0,
+					"idle": 10000
+				}
+			}
+		}
+	},
+	"clients": {
+		"wallet": {
+			"url": "http://52.59.100.223:8001",
+			"apiKey": "e58c2a26-966d-4f3f-8c9e-3eb3455162b5",
+			"contractAddress": "0x1773b9141f0ac81aebd126fd017e84e80771261c"
+		}
+	},
+	"gateways": {
+		"enpayment": {
+			"merchantId": "11250165",
+			"username": "011244427",
+			"password": "440196094",
+			"endPoint": "https://pna.shaparak.ir/ref-payment2/RestServices/mts/",
+			"redirectUrl": "https://gamecenter.algobotai.com/api/asset/deposit/enpayment/callback"
+		},
+		"bahamta": {
+			"apiKey": "webpay:9e50b826-7c9d-485a-af3d-cc0aed56278d:fd0af6c9-4feb-489d-8eb8-09d997c85296",
+			"endPoint": "https://webpay.bahamta.com/api/",
+			"redirectUrl": "https://gamecenter.algobotai.com/api/asset/deposit/bahamta/callback"
+		},
+		"paxful": {
+			"secret": "m9qKmoOpOc6RcSDPeAtXWDb8IC803Qau",
+			"merchant": "9LrdJ8wgkKb",
+			"apikey": "R1XXI0EjJBookvEFVAnWEO3gVuHSx7c0",
+			"endPoint": "https://paxful.com/wallet/pay?"
+		},
+		"advcash": {
+			"ac_account_email": "aref@volex.io",
+			"ac_sci_name": "Volex",
+			"secret": "Tiruxtur1970$#@",
+			"ac_success_url": "https://play.algobotai.com/dashboard/setting?tab=payment-history",
+			"ac_success_url_method": "GET",
+			"ac_fail_url": "https://play.algobotai.com/dashboard/setting?tab=payment-history",
+			"ac_fail_url_method": "GET",
+			"ac_status_url": "https://gamecenter.algobotai.com/api/asset/deposit/advcash/callback",
+			"ac_status_url_method": "GET",
+			"endPoint": "https://wallet.advcash.com/sci/?"
+		},
+		"stripe": {
+			"secret": "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",
+			"redirectUrl": "https://play.algobotai.com/dashboard/setting?tab=payment-history"
+		},
+		"ramp": {
+			"hostApiKey": "wn25y7nx6cyb4oqutc5obnnywwwt4gz36yw5fypw",
+			"endPoint": "https://buy.ramp.network/",
+			"redirectUrl": "https://play.algobotai.com/dashboard/setting?tab=payment-history&status=success"
+		}
+	},
+	"services": {
+		"rabbitmq": {
+			"url": "amqp://admin:CusHUqxmE8pLYT6r36XvrJhzq17HsKUnnRENCBoIke3Sv9h30qrjXndRWJvpDeD1zBHE1b6Nk5LXYuD6@18.192.24.6"
+		},
+		"pushNotification": {
+			"serverKey": "AAAAftNquO8:APA91bF-WkcBWtEonEKaDWc9SKgDVwpxG4mV_MiVoCTQ-x87FcfBv27sn2Qs2m7flLtrRl4OI7gXMCZa2VE1-9hhefmH0zdPOXY48pFJkjhIo4fdbzhSOkVNcUm-1uxLbblsXh_g7x-Z"
+		}
+	},
+	"base": {
+		"frontUrl": "https://play.algobotai.com/dashboard/setting?tab=payment-history"
+	},
+	"captcha": {
+		"recaptchaV3SecKey": "6LcSaNAmAAAAALutBNns64A6w0wlDIud4ANPQjNh"
+	}
+}

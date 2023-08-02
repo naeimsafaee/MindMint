@@ -1,0 +1,95 @@
+{
+	"authentication": {
+		"public": {
+			"secret": "xxxxxxxx",
+			"expiry": 604800
+		},
+		"manager": {
+			"secret": "xxxxxxxx",
+			"accessExpiry": 604800,
+			"refreshExpiry": 604800,
+			"expiry": 604800
+		},
+		"user": {
+			"secret": "xxxxxxxx",
+			"accessExpiry": 604800,
+			"refreshExpiry": 604800,
+			"expiry": 604800
+		}
+	},
+	"databases": {
+		"redis": {
+			"cache": {
+				"host": "localhost",
+				"port": 6379,
+				"password": "",
+				"no_ready_check": true,
+				"db": 3
+			},
+			"rateLimit": {
+				"host": "localhost",
+				"port": 6379,
+				"password": "",
+				"no_ready_check": true,
+				"db": 3
+			}
+		},
+		"postgres": {
+			"sync": {
+				"force": false,
+				"alter": false
+			},
+			"database": "Wolfin-Local",
+			"username": "postgres",
+			"password": "postgres",
+			"options": {
+				"host": "localhost",
+				"port": 5432,
+				"dialect": "postgres",
+				"logging": false,
+				"operationAliases": false,
+				"define": {
+					"charset": "utf8",
+					"collate": "utf8_general_ci"
+				},
+				"pool": {
+					"max": 100,
+					"min": 0,
+					"idle": 10000
+				}
+			}
+		},
+		"postgresEx": {
+			"sync": {
+				"force": false,
+				"alter": false
+			},
+			"database": "test",
+			"username": "postgres",
+			"password": "postgres",
+			"options": {
+				"host": "localhost",
+				"port": 5432,
+				"dialect": "postgres",
+				"logging": false,
+				"operationAliases": false,
+				"define": {
+					"charset": "utf8",
+					"collate": "utf8_general_ci"
+				},
+				"pool": {
+					"max": 100,
+					"min": 0,
+					"idle": 10000
+				}
+			}
+		}
+	},
+	"clients": {
+		"wallet": {
+			"url": "http://35.158.128.146:8001",
+			"apiKey": "492ca4f0-0211-489f-b5e9-961dcc381434",
+			"contractAddress": "0x8aa6e4a4ebed809907c24afa07f275f82ad9c78f"
+		}
+	}
+}

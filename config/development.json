@@ -1,0 +1,151 @@
+{
+	"authentication": {
+		"deviceLimit": {
+			"app": 1,
+			"pc": 1
+		},
+		"public": {
+			"secret": "xxxxxxxx",
+			"expiry": 604800
+		},
+		"manager": {
+			"secret": "xxxxxxxx",
+			"accessExpiry": 604800,
+			"refreshExpiry": 604800,
+			"expiry": 604800
+		},
+		"user": {
+			"secret": "xxxxxxxx",
+			"accessExpiry": 604800,
+			"refreshExpiry": 604800,
+			"expiry": 604800
+		},
+		"agent": {
+			"secret": "xxxxxxxx",
+			"accessExpiry": 604800,
+			"refreshExpiry": 604800,
+			"expiry": 604800
+		}
+	},
+	"databases": {
+		"redis": {
+			"cache": {
+				"host": "3.120.184.121",
+				"port": 6379,
+				"password": "cvODNDvlfFKz2hSfhhYMKs//4fxkwAAc7jB/atb/uBbo1Z1nDOUKIxthMc3y5RaDKVa45NxUJKKfkTic",
+				"no_ready_check": true,
+				"db": 3
+			},
+			"rateLimit": {
+				"host": "3.120.184.121",
+				"port": 6379,
+				"password": "cvODNDvlfFKz2hSfhhYMKs//4fxkwAAc7jB/atb/uBbo1Z1nDOUKIxthMc3y5RaDKVa45NxUJKKfkTic",
+				"no_ready_check": true,
+				"db": 3
+			}
+		},
+		"postgres": {
+			"sync": {
+				"force": false,
+				"alter": false
+			},
+			"database": "mindmint",
+			"username": "postgres",
+			"password": "1Syu2Vu4y7SYd8Rzrz4T7cg4eOG8eT2",
+			"options": {
+				"host": "3.120.184.121",
+				"port": 5432,
+				"dialect": "postgres",
+				"logging": false,
+				"operationAliases": false,
+				"define": {
+					"charset": "utf8",
+					"collate": "utf8_general_ci"
+				},
+				"pool": {
+					"max": 25,
+					"min": 0,
+					"idle": 10000
+				}
+			}
+		}
+	},
+	"clients": {
+		"wallet": {
+			"url": "http://3.120.184.121:8001",
+			"nftUrl": "http://3.120.184.121:8002",
+			"apiKey": "492ca4f0-0211-489f-b5e9-961dcc381434",
+			"contractAddress": "0x2ABfE1639Db472B444688aE4bc2d9f9dC92Ed2C6"
+		}
+	},
+	"gateways": {
+		"enpayment": {
+			"merchantId": "11250165",
+			"username": "011244427",
+			"password": "440196094",
+			"endPoint": "https://pna.shaparak.ir/ref-payment2/RestServices/mts/",
+			"redirectUrl": "https://gamecenter.algobotai.com/api/asset/deposit/enpayment/callback"
+		},
+		"bahamta": {
+			"apiKey": "webpay:9e50b826-7c9d-485a-af3d-cc0aed56278d:fd0af6c9-4feb-489d-8eb8-09d997c85296",
+			"endPoint": "https://webpay.bahamta.com/api/",
+			"redirectUrl": "https://gamecenter.algobotai.com/api/asset/deposit/bahamta/callback"
+		},
+		"paxful": {
+			"secret": "m9qKmoOpOc6RcSDPeAtXWDb8IC803Qau",
+			"merchant": "9LrdJ8wgkKb",
+			"apikey": "R1XXI0EjJBookvEFVAnWEO3gVuHSx7c0",
+			"endPoint": "https://paxful.com/wallet/pay?"
+		},
+		"advcash": {
+			"ac_account_email": "aref@volex.io",
+			"ac_sci_name": "Volex",
+			"secret": "Tiruxtur1970$#@",
+			"ac_success_url": "https://play.algobotai.com/dashboard/setting?tab=payment-history",
+			"ac_success_url_method": "GET",
+			"ac_fail_url": "https://play.algobotai.com/dashboard/setting?tab=payment-history",
+			"ac_fail_url_method": "GET",
+			"ac_status_url": "https://gamecenter.algobotai.com/api/asset/deposit/advcash/callback",
+			"ac_status_url_method": "GET",
+			"endPoint": "https://wallet.advcash.com/sci/?"
+		},
+		"ramp": {
+			"hostApiKey": "wn25y7nx6cyb4oqutc5obnnywwwt4gz36yw5fypw",
+			"endPoint": "https://buy.ramp.network/",
+			"redirectUrl": "https://play.algobotai.com/dashboard/setting?tab=payment-history&status=success"
+		},
+		"stripe": {
+			"secret": "sk_test_51LFCseLhJRGJRgaFxOYyvaQClVJTnamToUteCD1ABXwltkx2oXwzJesrndulLUEYuYY93P9lgeXp8jnBlZETCL9u00ruJwu888",
+			"redirectUrl": "https://ee19-5-9-235-151.eu.ngrok.io"
+		},
+		"zarinpal": {
+			"merchantId": "",
+			"redirectUrl": "https://ee19-5-9-235-151.eu.ngrok.io"
+		}
+	},
+	"services": {
+		"rabbitmq": {
+			"url": "amqp://admin:CusHUqxmE8pLYT6r36XvrJhzq17HsKUnnRENCBoIke3Sv9h30qrjXndRWJvpDeD1zBHE1b6Nk5LXYuD6@3.120.184.121"
+		},
+		"pushNotification": {
+			"app_name": "Mindmint",
+			"serverKey": "AAAAu0gW7mo:APA91bEfxahkEZaqPz1UcTpApxFl8q7pIA1NGQAouo1BX8NR_jbwaKPNZV-NJrldCWF8e6fJ9ilPLgT0JqD_6OyWiButneVRflI_LE41iLZDmJx8GAVnC0PFXza2KRktTBud_Wlb9vOr"
+		}
+	},
+	"base": {
+		"frontUrl": "https://play.algobotai.com/dashboard/setting?tab=payment-history"
+	},
+	"captcha": {
+		"recaptchaV3SecKey": "6LcSaNAmAAAAALutBNns64A6w0wlDIud4ANPQjNh"
+	},
+	"encryption": {
+		"encryptionKey": "L6Kj4m&z9F7V2v@8qWc5b#NpMx@R1aui"
+	},
+	"RPC": {
+		"BSC": "wss://bsc-mainnet.nodereal.io/ws/v1/758fdad3e3d543a3b225e36610e98cd0"
+	},
+	"CONTRACT": {
+		"STYLIKE": "0x3a28c3d7f67f42bf27bc464e2c3bec7d6afd978b",
+		"FIRST_BLOCK": 20722520
+	}
+}
